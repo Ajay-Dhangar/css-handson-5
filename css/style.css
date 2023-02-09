@@ -1,0 +1,34 @@
+body {
+  background-color: rgba(205, 243, 14, 0.91);
+  display: grid;
+  place-items: center;
+}
+div {
+  display: flex;
+}
+.row {
+  width: 100px;
+  height: 100px;
+  margin: 25px;
+  background-color: cadetblue;
+  border: 1px solid black;
+}
+.first {
+  transition: 2s;
+  transform: skewX(20deg);
+}
+.first:hover {
+  transform: skewX(-20deg);
+}
+.second {
+  transition: 2s;
+  transform: skewY(5deg);
+}
+.second:hover {
+  transform: skewY(-5deg);
+}
+
+a {
+  font-size: 32px;
+  font-weight: bold;
+}
