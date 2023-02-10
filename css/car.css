@@ -26,9 +26,11 @@ h1 {
     transform: translateX(-1500px);
   }
 }
+
 #road {
   position: absolute;
   top: 75%;
+
   animation: road 100s linear infinite;
 }
 @keyframes road {
