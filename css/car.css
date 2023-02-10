@@ -1,6 +1,7 @@
 body {
   background-image: url(../img/sky.jpg);
   background-repeat: no-repeat;
+  overflow-X: hidden;
 }
 
 h1 {
