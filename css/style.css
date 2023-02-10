@@ -3,7 +3,7 @@ body {
   display: grid;
   place-items: center;
 }
-div {
+.container {
   display: flex;
 }
 .row {
@@ -13,21 +13,88 @@ div {
   background-color: cadetblue;
   border: 1px solid black;
 }
-.first {
-  transition: 2s;
-  transform: skewX(20deg);
-}
-.first:hover {
-  transform: skewX(-20deg);
-}
-.second {
-  transition: 2s;
-  transform: skewY(5deg);
-}
-.second:hover {
-  transform: skewY(-5deg);
+.first div {
+  animation: first 2s infinite;
 }
 
+@keyframes first {
+  from {
+    transform: skewX(30deg);
+  }
+  to {
+    transform: skewX(-30deg);
+  }
+}
+.second div {
+  animation: second 2s infinite;
+}
+
+@keyframes second {
+  from {
+    transform: skewY(20deg);
+  }
+  to {
+    transform: skewY(-20deg);
+  }
+}
+
+.third div {
+  animation: third 2s infinite;
+}
+@keyframes third {
+  from {
+    transform: rotate(30deg);
+    transition-duration: 5s;
+    transition-delay: now;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  to {
+    transform: rotate(160deg);
+  }
+}
+.forth .col-3 {
+  animation: col-3 2s infinite;
+  background-color: green;
+}
+@keyframes col-3 {
+  from {
+    transform: rotate(30deg);
+    transition-duration: 5s;
+    transition-delay: now;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  to {
+    transform: rotate(160deg);
+  }
+}
+.col-2 {
+  background-color: brown;
+}
+.forth .col-2 {
+  animation: col-2 2s infinite;
+}
+@keyframes col-2 {
+  from {
+    transform: scaleX(0.2);
+  }
+  to {
+    transform: skewX(2);
+  }
+}
+
+.forth .col-1 {
+  animation: col-1 2s infinite;
+}
+@keyframes col-1 {
+  from {
+    transform: scaleY(0.2);
+  }
+  to {
+    transform: skewY(2);
+  }
+}
 a {
   font-size: 32px;
   font-weight: bold;
